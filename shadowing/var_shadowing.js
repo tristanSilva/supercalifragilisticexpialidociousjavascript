@@ -13,12 +13,13 @@ if(rateStandard < rates){
     console.log('rates :', rates)
 }
 
+// rates after
 console.log('rates after > ',rates)
-
 
 if(rateStandard < rates){
     let rateStandard = rateStandard - 10;
     console.log('rateStandard :', rateStandard)
 }
 
+// rateStandard after
 console.log('rateStandard after > ',rateStandard)
