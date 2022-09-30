@@ -5,11 +5,7 @@ function temperature(celsius, decimal){
     return Number(far.toFixed(decimal))
 }
 
-const caps = function(name){
-    return `${name.charAt(0).toUpperCase()} ${name.slice(1)}`
-}
-
-const rate = (celsius, decimal) => {
+const temp = (celsius, decimal) => {
 
     decimal = decimal || 1;
     const far = celsius * 1.8 * 32;
@@ -17,9 +13,4 @@ const rate = (celsius, decimal) => {
 
 };
 
-console.log(rate(21, 1))
-
-
-// const final = rate(celsius, callback => callback(rate(value, decimal)))
-
-// console.log(final(21))
+console.log(temp(21, 1))
