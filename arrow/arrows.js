@@ -7,12 +7,14 @@ const user = {
     age: '30'
 }
 
+// common function
 function uppercasing(name){
     return `${name.charAt(0).toUpperCase()} ${name.slice(1)}`
 }
 
 console.log(uppercasing(user.name))
 
+// function with assigned variable
 const caps = function(name){
     return `${name.charAt(0).toUpperCase()} ${name.slice(1)}`
 }
@@ -21,14 +23,25 @@ console.log(caps("camille"))
 
 // arrow functions => function expressions
 // all arrow functions are anonymous
-
 const capsArrow = name => {
     return `${name.charAt(0).toUpperCase()} ${name.slice(1)}`
 }
 
 console.log(capsArrow("cyrus"))
 
-const arrows = name => 
-    `${name.charAt(0).toUpperCase()} ${name.slice(1)}`;
+// arrow function without return
+const arrows = name => `${name.charAt(0).toUpperCase()} ${name.slice(1)}`;
 
 console.log(arrows("thomas"))
+
+// callback - a function call after a function
+// passing a function to another function - high-order function
+function allCaps(name, callback){
+    return callback(arrows(name))
+}
+
+const result = allCaps(user.name, (names)=>{
+    return `Hi! there, ${names}`
+});
+
+console.log(result)
