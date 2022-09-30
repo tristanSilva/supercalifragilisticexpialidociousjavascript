@@ -45,3 +45,8 @@ const result = allCaps(user.name, (names)=>{
 });
 
 console.log(result)
+
+//removed return
+const results = allCaps(user.name, names => `Hi! there, ${names}`);
+
+console.log(results)
